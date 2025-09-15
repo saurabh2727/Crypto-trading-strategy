@@ -69,8 +69,9 @@ Positions are closed when ANY of these conditions are met:
 ├── final_positive_strategy.py    # Main profitable trading strategy
 ├── crypto_trading_results.csv    # Trading results output (generated)
 ├── datathon_Final.ipynb          # Original analysis notebook
-├── training_set.csv              # Training data (not in git - large file)
-├── public_set.csv                # Trading data (not in git - large file)
+├── public_set_sample.csv         # Sample trading data (1000 rows)
+├── training_set.csv              # Training data (not in git - 663MB)
+├── public_set.csv                # Full trading data (not in git - 959MB)
 ├── requirements.txt              # Python dependencies
 ├── Scenario                      # Trading requirements document
 ├── .gitignore                    # Git ignore file
@@ -96,7 +97,8 @@ Positions are closed when ANY of these conditions are met:
 
 3. **Add your data files**:
    - Place `training_set.csv` and `public_set.csv` in the project directory
-   - These files are not included in git due to size
+   - Large data files (959MB+) are not included in git due to GitHub size limits
+   - A sample file `public_set_sample.csv` (1000 rows) is included for testing
 
 ### Running the Strategy
 

@@ -31,6 +31,7 @@ ENV/
 
 # Data files (large)
 *.csv
+!public_set_sample.csv
 
 # Model files
 *.pkl

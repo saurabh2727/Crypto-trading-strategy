@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import gzip
+import os
 
 def create_final_positive_strategy():
     """
@@ -7,8 +9,16 @@ def create_final_positive_strategy():
     """
     print("Running final positive return strategy...\n")
 
-    # Load public data
-    validation_df = pd.read_csv("public_set.csv")
+    # Load public data (try compressed version first)
+    if os.path.exists("public_set.csv.gz"):
+        with gzip.open("public_set.csv.gz", 'rt') as f:
+            validation_df = pd.read_csv(f)
+        print("Loaded compressed public dataset")
+    elif os.path.exists("public_set.csv"):
+        validation_df = pd.read_csv("public_set.csv")
+        print("Loaded uncompressed public dataset")
+    else:
+        raise FileNotFoundError("Public dataset not found. Please ensure 'public_set.csv' or 'public_set.csv.gz' is in the directory.")
     validation_df = validation_df.iloc[3000001:, :]
     validation_df = validation_df.loc[:, ~validation_df.columns.str.contains('^Unnamed')]
 
