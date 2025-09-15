@@ -67,13 +67,12 @@ Positions are closed when ANY of these conditions are met:
 
 ```
 ├── final_positive_strategy.py    # Main profitable trading strategy
-├── run_strategy.sh               # Execution script
-├── crypto_trading_results.csv    # Trading results output
+├── crypto_trading_results.csv    # Trading results output (generated)
 ├── datathon_Final.ipynb          # Original analysis notebook
 ├── training_set.csv              # Training data (not in git - large file)
 ├── public_set.csv                # Trading data (not in git - large file)
 ├── requirements.txt              # Python dependencies
-├── start_jupyter.sh              # Jupyter launcher
+├── Scenario                      # Trading requirements document
 ├── .gitignore                    # Git ignore file
 └── README.md                     # This documentation
 ```
@@ -101,12 +100,7 @@ Positions are closed when ANY of these conditions are met:
 
 ### Running the Strategy
 
-**Quick Start**:
-```bash
-./run_strategy.sh
-```
-
-**Manual Execution**:
+**Execute the strategy**:
 ```bash
 source crypto_env/bin/activate
 python final_positive_strategy.py
