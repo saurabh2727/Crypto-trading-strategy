@@ -1,0 +1,4 @@
+strategy
+1. Buy the first row and if the minimum profit condition is invoked for barClosePrice, then sell and buy the next row again.
+2. Long sell: Since the window to buy and sell is 4 days only, for every row, check the prediction for the next 4 days, then buy at the minimum price and sell at the maximum price.
+3. Short sell: do the opposite of long sell.
